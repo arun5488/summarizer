@@ -26,8 +26,8 @@ except Exception as e:
 STAGE_NAME = "Model Trainer stage"
 try:
     logger.info(f"stage {STAGE_NAME} initiated")
-    model_trainer_pipeline = ModelTrainerPipeline()
-    model_trainer_pipeline.initiate_model_training()
+    # model_trainer_pipeline = ModelTrainerPipeline()
+    # model_trainer_pipeline.initiate_model_training()
     logger.info(f"stage {STAGE_NAME} completed")
 except Exception as e:
     logger.exception(f"exception {e} ")
