@@ -51,7 +51,8 @@ class ModelTrainer:
         logger.info("Training completed")
 
         ## save model
-        model_pegasus.save_pretrained(os.path.join(self.config.root_dir, "pegasus-samsum-model"))
+        # model_pegasus.save_pretrained(os.path.join(self.config.root_dir, "pegasus-samsum-model"))
+        torch.save(model_pegasus.state_dict(), os.path.join(self.config.root_dir, "pegasus-samsum-model.pt"))
         logger.info("Model saved successfully")
         # save tokenizer
         tokenizer.save_pretrained(os.path.join(self.config.root_dir,"tokenizer"))
